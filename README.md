@@ -1,1 +1,2 @@
-# ToSyfJest
+# Car Central Computer 
+![centralComputerDiagram](centralComputerDiagram.png)
