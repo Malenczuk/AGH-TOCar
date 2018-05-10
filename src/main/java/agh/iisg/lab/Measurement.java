@@ -31,5 +31,13 @@ public class Measurement {
         return unit;
     }
 
-
+    @Override
+    public String toString() {
+        return "Measurement{" +
+                "type='" + type + '\'' +
+                ", date=" + date +
+                ", value=" + value +
+                ", unit='" + unit + '\'' +
+                '}';
+    }
 }

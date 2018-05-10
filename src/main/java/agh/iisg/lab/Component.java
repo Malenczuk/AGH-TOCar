@@ -24,5 +24,7 @@ public class Component {
         return measurements.get(type);
     }
 
-    public void addMeasurement()
+    public void addMeasurement(Measurement measurement){
+        measurements.put(measurement.getType(), measurement);
+    }
 }
