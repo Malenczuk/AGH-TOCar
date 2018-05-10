@@ -18,19 +18,19 @@ public class CentralComputer {
         return components;
     }
 
-    public LinkedList<String> getComponentMeasurementsTypes(String componentName){
+    public LinkedList<String> getComponentMeasurementsNames(String componentName){
         LinkedList<String> types = new LinkedList<>();
         Component searchedComponent = getSingleComponent(componentName);
         if (searchedComponent == null) return null;
         for (Measurement measurement: searchedComponent.getMeasurements().values()){
-            types.add(measurement.getType());
+            types.add(measurement.getName());
         }
         return types;
     }
 
-    public Measurement getComponentMeasurement(String componentName, String type){
+    public Measurement getComponentMeasurement(String componentName, String name){
         Component component = getSingleComponent(componentName);
-        return component.getMeasurements().get(type);
+        return component.getMeasurements().get(name);
     }
 
     public LinkedList<Measurement> getComponentMeasurements(String componentName){

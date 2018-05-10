@@ -3,27 +3,27 @@ package agh.iisg.lab;
 import java.util.Date;
 
 public class Measurement {
-    private final String type;
+    private final String name;
     private final Date date;
-    private final Double value;
+    private final Number value;
     private final String unit;
 
-    public Measurement(String type, Date date, Double value, String unit) {
-        this.type = type;
+    public Measurement(String name, Date date, Number value, String unit) {
+        this.name = name;
         this.date = date;
         this.value = value;
         this.unit = unit;
     }
 
-    public String getType() {
-        return type;
+    public String getName() {
+        return name;
     }
 
     public Date getDate() {
         return date;
     }
 
-    public Double getValue() {
+    public Number getValue() {
         return value;
     }
 
@@ -33,15 +33,7 @@ public class Measurement {
 
     @Override
     public String toString() {
-        return "Measurement{" +
-                "type='" + type + '\'' +
-                ", date=" + date +
-                ", value=" + value +
-                ", unit='" + unit + '\'' +
-                '}';
+        return (date == null ? "" : date + " ") + name + ": " + value + " " + unit;
     }
 
-    public String valueWithUnit(){
-        return value + " " + unit;
-    }
 }

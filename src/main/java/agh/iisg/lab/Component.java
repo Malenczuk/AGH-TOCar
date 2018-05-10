@@ -4,11 +4,10 @@ import java.util.HashMap;
 
 public class Component {
     private String name;
-    private String informations;
+    private HashMap<String, String> additionalInfo = new HashMap<>();
 
-    public Component(String name, String informations) {
+    public Component(String name) {
         this.name = name;
-        this.informations = informations;
     }
 
     private HashMap<String, Measurement> measurements = new HashMap<>();
@@ -21,8 +20,12 @@ public class Component {
         return name;
     }
 
-    public String getInformations() {
-        return informations;
+    public HashMap<String, String> getAdditionalInfo() {
+        return additionalInfo;
+    }
+
+    public void addAdditionalInfo(String infoKey, String infoValue ) {
+        additionalInfo.put(infoKey, infoValue);
     }
 
     public Measurement getMeasurement(String type){
@@ -30,6 +33,6 @@ public class Component {
     }
 
     public void addMeasurement(Measurement measurement){
-        measurements.put(measurement.getType(), measurement);
+        measurements.put(measurement.getName(), measurement);
     }
 }
