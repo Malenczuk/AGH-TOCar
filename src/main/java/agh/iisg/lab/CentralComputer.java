@@ -18,7 +18,7 @@ public class CentralComputer {
         return components;
     }
 
-    public List<String> getComponentMeasurementsTypes(String componentName){
+    public LinkedList<String> getComponentMeasurementsTypes(String componentName){
         LinkedList<String> types = new LinkedList<>();
         Component searchedComponent = getSingleComponent(componentName);
         if (searchedComponent == null) return null;

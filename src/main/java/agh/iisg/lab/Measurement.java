@@ -40,4 +40,8 @@ public class Measurement {
                 ", unit='" + unit + '\'' +
                 '}';
     }
+
+    public String valueWithUnit(){
+        return value + " " + unit;
+    }
 }

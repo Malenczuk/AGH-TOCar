@@ -6,6 +6,11 @@ public class Component {
     private String name;
     private String informations;
 
+    public Component(String name, String informations) {
+        this.name = name;
+        this.informations = informations;
+    }
+
     private HashMap<String, Measurement> measurements = new HashMap<>();
 
     public HashMap<String, Measurement> getMeasurements() {
