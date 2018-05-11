@@ -36,5 +36,9 @@ public class App {
                 System.out.println(measurement.toString());
             }
         }
+
+        System.out.println("\n\n");
+        System.out.println(centralComputer.getMeasurementValue("fuel usage"));
+
     }
 }

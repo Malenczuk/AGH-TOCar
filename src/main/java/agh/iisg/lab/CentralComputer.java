@@ -40,6 +40,25 @@ public class CentralComputer {
         return measurements;
     }
 
+    private Component getComponentWithMeasurement(String measurementType){
+        for (Component component: components){
+            for (String mesType: component.getMeasurements().keySet()){
+                if (mesType.equals(measurementType)){
+                    return component;
+                }
+            }
+        }
+        return null;
+    }
+
+    public String getMeasurementValue(String measurementType){
+        Component component = getComponentWithMeasurement(measurementType);
+        if(component != null) {
+            return component.getMeasurements().get(measurementType).toString();
+        }
+        return null;
+    }
+
     private Component getSingleComponent(String componentName) {
         Component searchedComponent = null;
         for (Component component: components){

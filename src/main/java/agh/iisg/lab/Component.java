@@ -5,12 +5,12 @@ import java.util.HashMap;
 public class Component {
     private String name;
     private HashMap<String, String> additionalInfo = new HashMap<>();
+    private HashMap<String, Measurement> measurements = new HashMap<>();
+
 
     public Component(String name) {
         this.name = name;
     }
-
-    private HashMap<String, Measurement> measurements = new HashMap<>();
 
     public HashMap<String, Measurement> getMeasurements() {
         return measurements;
